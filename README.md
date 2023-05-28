@@ -11,7 +11,9 @@ cd https://github.com/imalicx/Workshop3.git
 cd Workshop3
 # Screenshots
 1. Homepage
-![image](https://github.com/imalicx/Workshop3/assets/130395112/3d46d8da-57f8-4fe3-afdf-238fa130c326)
+![image](https://github.com/imalicx/Workshop3/assets/130395112/3041ea62-a4a7-43f6-bbc1-59cfe499be3c)
+
+
 
 
 2. Overnight
