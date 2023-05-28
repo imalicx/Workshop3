@@ -1,5 +1,4 @@
 # Workshop3
-redo
 Website that calculates an overnight stay in a resort
 Installation and Usage To run this project locally, follow these steps:
 
