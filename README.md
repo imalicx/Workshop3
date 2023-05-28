@@ -20,3 +20,4 @@ cd Workshop3
 
 ![image](https://github.com/imalicx/Workshop3/assets/130395112/2b078919-7565-4f8c-98c0-497b78c79354)
 
+Things I was most excited about implementing into this website: The pictures and the fact that these are actual places I am eager to visit.
