@@ -93,7 +93,7 @@ footer {
 }
 
 footer p {
-  margin: 0; /* Remove default margin to avoid extra space */
+  margin: 0; 
 }
 
 
@@ -113,13 +113,6 @@ footer p {
 
 
 
-
-
-/* Overnight stay */
-
-/* styles.css */
-
-/* Style the form */
 form {
   margin: 20px;
 }
@@ -156,7 +149,7 @@ input[type="submit"]:hover {
   background-color: #555;
 }
 
-/* Style the cost estimate result */
+
 #messageDiv, #costDiv {
   margin: 20px;
 }

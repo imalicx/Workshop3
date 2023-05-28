@@ -1,23 +1,17 @@
 function getRoomRate(checkInDate, roomType) {
-  // Replace this placeholder implementation with your actual logic
-  // for calculating the room rate based on the check-in date and room type
 
-  // Sample placeholder logic: 
-  // Room rates for each room type
+  // room rates for each room type
   const roomRates = {
     Queen: 100,
     King: 150,
     '2-Bedroom Suite': 250
   };
 
-  // Sample logic to calculate the room rate based on the check-in date and room type
+
   const baseRate = roomRates[roomType];
   const date = new Date(checkInDate);
-  const dayOfWeek = date.getDay(); // 0 (Sunday) to 6 (Saturday)
+  const dayOfWeek = date.getDay(); 
 
-  // Apply any additional logic or adjustments to the room rate based on the check-in date, if needed
-
-  // Return the calculated room rate
   return baseRate;
 }
 
@@ -36,11 +30,10 @@ function handleFormSubmit(event) {
   const messageDiv = document.getElementById('messageDiv');
   const costDiv = document.getElementById('costDiv');
 
-  // Clear previous messages and cost
   messageDiv.innerText = '';
   costDiv.innerHTML = '';
 
-  // Check if room type can accommodate the number of guests
+  
   const maxOccupancy = roomType === 'Queen' ? 5 : (roomType === 'King' ? 2 : 6);
   const totalGuests = numAdults + numChildren;
   if (totalGuests > maxOccupancy) {
@@ -48,26 +41,26 @@ function handleFormSubmit(event) {
     return;
   }
 
-  // Calculate the room rate
+  //  the room rate
   const roomRate = getRoomRate(checkInDate, roomType);
 
-  // Calculate the discounted room rate
+  //  the discounted room rate
   let discountedRoomRate = roomRate;
   if (discount === 'aaa') {
-    discountedRoomRate -= roomRate * 0.1; // 10% discount for AAA/Senior
+    discountedRoomRate -= roomRate * 0.1; // 10% discount for zenior
   } else if (discount === 'military') {
-    discountedRoomRate -= roomRate * 0.2; // 20% discount for Military
+    discountedRoomRate -= roomRate * 0.2; // 20% discount for military
   }
 
-  // Calculate the tax and total cost
+  // tax and cost
   const taxRate = 0.12;
   const tax = (discountedRoomRate * numNights) * taxRate;
   const totalCost = (discountedRoomRate * numNights) + tax;
 
-  // Generate confirmation number
+  // confirmation number
   const confirmationNumber = `${name.substring(0, 3).toUpperCase()}-${checkInDate.replace(/-/g, '').substring(2)}-${numNights}:${numAdults}:${numChildren}`;
 
-  // Display the cost estimate
+  // display the cost
   costDiv.innerHTML = `
     <p>Original Room Cost: $${roomRate.toFixed(2)}</p>
     <p>Discount: ${discount === 'none' ? 'None' : `${discount} (${discount === 'aaa' ? '10' : '20'}%)`}</p>
