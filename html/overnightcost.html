@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resort Name - Overnight Stay</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="nav">
+      <a href="#" class="logo">Summer Trips</a>
+
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+
+      <div class="nav__link hide">
+        <a href="../home.html">Home</a>
+        <a href="./html/overnightcost.html">OverNightStay</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <h3 style="text-align: center;">Overnight Stay Cost Estimator</h3>
+  
+  <!-- Create a form for the overnight stay cost estimator -->
+  <form id="overnightForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <br>
+    <label for="checkInDate">Check-in Date:</label>
+    <input type="date" id="checkInDate" required>
+    <br>
+    <label for="numNights">Number of Nights:</label>
+    <input type="number" id="numNights" min="1" max="28" required>
+    <br>
+    <label for="roomType">Room Type:</label>
+    <br>
+    <input type="radio" id="queen" name="roomType" value="Queen" required>
+    <label for="queen">Queen</label>
+    <br>
+    <input type="radio" id="king" name="roomType" value="King" required>
+    <label for="king">King</label>
+    <br>
+    <input type="radio" id="suite" name="roomType" value="2-Bedroom Suite" required>
+    <label for="suite">2-Bedroom Suite</label>
+    <br>
+    <label for="numAdults">Number of Adults:</label>
+    <input type="number" id="numAdults" min="1" max="4" required>
+    <br>
+    <label for="numChildren">Number of Children:</label>
+    <input type="number" id="numChildren" min="0" max="4" required>
+    <br>
+    <label for="discount">Discount:</label>
+    <br>
+    <input type="radio" id="none" name="discount" value="none" required>
+    <label for="none">None</label>
+    <br>
+    <input type="radio" id="aaa" name="discount" value="aaa" required>
+    <label for="aaa">AAA/Senior (10%)</label>
+    <br>
+    <input type="radio" id="military" name="discount" value="military" required>
+    <label for="military">Military (20%)</label>
+    <br>
+    <input type="submit" value="Estimate Stay Cost">
+    <input type="reset" id="resetButton" value="Reset Form">
+
+  </form>
+
+  <!-- Add a div to display the cost estimate result -->
+  <div id="messageDiv"></div>
+  <div id="costDiv"></div>
+  
+  <footer>
+    <p>&copy; 2023 Tourist Escape. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/nav.js"></script>
+
+</body>
+</html>
